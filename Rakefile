@@ -5,12 +5,14 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "win32-aques_talk"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{AquesTalk.dll, AquesTalkDa.dll ruby bindings}
+    gem.description = %Q{AquesTalk.dll, AquesTalkDa.dll ruby bindings}
     gem.email = "komagata@gmail.com"
     gem.homepage = "http://github.com/komagata/win32-aques_talk"
     gem.authors = ["Masaki Komagata"]
     gem.add_development_dependency "thoughtbot-shoulda"
+    gem.files = FileList["lib/*.rb", "test/*.rb", "*.gemspec", "vendor/aques_talk/lib/*"].to_a
+    gem.add_dependency('systemu', '>= 1.2.0')
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError
