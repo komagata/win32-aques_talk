@@ -3,5 +3,10 @@ require "ffi"
 module AquesTalk
   extend FFI::Library
   ffi_lib File.join(File.dirname(__FILE__), "..", "vendor", "aques_talk", "lib", "AquesTalk.dll")
-  attach_function :play_sync, :AquesTalkDa_PlaySync, [:string, :int], :int
+
+# unsigned char * AquesTalk_Synthe(const char *koe, int iSpeed, int *size) 
+  attach_function :synthe, :AquesTalk_Synthe, [:string, :int, :int], :string
+
+# void AquesTalk_FreeWave (unsigned char *wav)
+  attach_function :free_wave, :AquesTalk_FreeWave, [:string], :void
 end

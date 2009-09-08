@@ -23,7 +23,8 @@ Gem::Specification.new do |s|
      "test/win32-aques_talk_test.rb",
      "vendor/aques_talk/lib/AqLicense.txt",
      "vendor/aques_talk/lib/AquesTalk.dll",
-     "vendor/aques_talk/lib/AquesTalkDa.dll"
+     "vendor/aques_talk/lib/AquesTalkDa.dll",
+     "win32-aques_talk.gemspec"
   ]
   s.homepage = %q{http://github.com/komagata/win32-aques_talk}
   s.rdoc_options = ["--charset=UTF-8"]
