@@ -13,6 +13,7 @@ begin
     gem.add_development_dependency "thoughtbot-shoulda"
     gem.files = FileList["lib/*.rb", "lib/*/*.rb", "test/*.rb", "*.gemspec", "vendor/aques_talk/lib/*"].to_a
     gem.platform = Gem::Platform.local
+		gem.add_dependency('ffi', '>= 0.4.0')
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError
