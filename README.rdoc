@@ -1,6 +1,15 @@
 = win32-aques_talk
 
-Description goes here.
+Win32 AquesTalk ruby bindings.
+
+== Installation
+
+  $ sudo gem install komagata-win32-aques_talk -s http://gems.github.com
+
+== Usage
+
+  require "aques_talk"
+	AquesTalk.play_sync("Ç±ÇÍÇÕÇƒÇ∑Ç∆Ç≈Ç∑ÇÀÅH") # Shift_JIS only
 
 == Note on Patches/Pull Requests
  

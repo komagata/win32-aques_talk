@@ -5,12 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{win32-aques_talk}
-  s.version = "0.2.0"
+  s.version = "0.4.0"
+  s.platform = Gem::Platform.new(["x86", "mswin32", "60"])
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Masaki Komagata"]
-  s.date = %q{2009-09-08}
-  s.description = %q{AquesTalk.dll, AquesTalkDa.dll ruby bindings}
+  s.date = %q{2009-09-12}
+  s.description = %q{Win32 AquesTalk ruby bindings.}
   s.email = %q{komagata@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -18,9 +19,10 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     "lib/aques_talk.rb",
-     "lib/aques_talk_da.rb",
+     "lib/aques_talk/aques_talk.rb",
+     "lib/aques_talk/aques_talk_da.rb",
+     "test/aques_talk_test.rb",
      "test/test_helper.rb",
-     "test/win32-aques_talk_test.rb",
      "vendor/aques_talk/lib/AqLicense.txt",
      "vendor/aques_talk/lib/AquesTalk.dll",
      "vendor/aques_talk/lib/AquesTalkDa.dll",
@@ -30,10 +32,10 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
-  s.summary = %q{AquesTalk.dll, AquesTalkDa.dll ruby bindings}
+  s.summary = %q{Win32 AquesTalk ruby bindings.}
   s.test_files = [
-    "test/test_helper.rb",
-     "test/win32-aques_talk_test.rb"
+    "test/aques_talk_test.rb",
+     "test/test_helper.rb"
   ]
 
   if s.respond_to? :specification_version then
@@ -42,13 +44,10 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
-      s.add_runtime_dependency(%q<systemu>, [">= 1.2.0"])
     else
       s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
-      s.add_dependency(%q<systemu>, [">= 1.2.0"])
     end
   else
     s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
-    s.add_dependency(%q<systemu>, [">= 1.2.0"])
   end
 end
