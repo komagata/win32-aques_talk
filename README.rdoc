@@ -9,7 +9,7 @@ Win32 AquesTalk ruby bindings.
 == Usage
 
   require "aques_talk"
-	AquesTalk.play_sync("‚±‚ê‚Í‚Ä‚·‚Æ‚Å‚·‚ËH") # Shift_JIS only
+  AquesTalk.play_sync("‚±‚ê‚Í‚Ä‚·‚Æ‚Å‚·‚ËH") # Shift_JIS only
 
 == Note on Patches/Pull Requests
  
